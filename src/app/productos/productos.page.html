@@ -13,7 +13,7 @@
       <h3>Catalogo de productos</h3>
     </ion-list-header>
 
-    <ion-item *ngFor="let catalogo of catalogo.catalogos" (click)=mostrarDetalle(catalogo)>
+    <ion-item *ngFor="let catalogo of catalogo.getProductos()" (click)=mostrarDetalle(catalogo)>
       <ion-thumbnail slot="start">
         <img src="../../assets/imgs/catalogo/{{catalogo.imagen}}">
       </ion-thumbnail>

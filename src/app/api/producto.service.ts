@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class ProductoService {
-  catalogos: any[]=[
+  private catalogos: any[]=[
     { "id": "1", "nombre": "El pistolero", "Descripcion": "Autor: Stephen King \n Cronologia: La torre oscura \n numero:1\n", "imagen":"El_pistolero.jpg", "precio": "14.99"},
     { "id": "2", "nombre": "La llegada de los tres","Descripcion": "Autor: Stephen King \nCronologia: La torre oscura\n numero:2", "imagen":"La_llegada_de_los_tres.jpg", "precio": "15.99"},
     { "id": "3", "nombre": "Las tierras baldias", "Descripcion": "Autor: Stephen King \nCronologia: La torre oscura\n numero:3", "imagen":"Las_tierras_baldias.jpg", "precio": "15.99"},
@@ -18,5 +18,9 @@ export class ProductoService {
   constructor(private route: Router) { }
   mostrarDetalle(catalogo) {
     this.route.navigate(['detalles-producto', { 'catalogo': JSON.stringify(catalogo) }]);
+  }
+
+  public getProductos(){
+    return this.catalogos;
   }
 }

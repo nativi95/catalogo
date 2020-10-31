@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary" >
-    <ion-title >
-      Mi Tienda
+  <ion-toolbar color="primary">
+    <ion-title>
+      Libreria la casita
     </ion-title>
   </ion-toolbar>
   <ion-toolbar color="success">
-    <ion-title *ngFor="let autorInfo of autorServe.autorInfo" >{{autorInfo.carnet}}</ion-title>
+    <ion-title *ngFor="let autorInfo of autorServe.getAutor()">{{autorInfo.carnet}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <div id="container">
-    
-    <p>Seleciones una de las opciones de nuestro menu: autor para consultar la informacion del autor y productos para navegar en nuestro catalogo</p>
-    <ion-button color="tertiary" expand="full" (click)=lanzarProducto()>Productos</ion-button><br/>
-    <ion-button color="light" expand="full" (click)=lanzarAutor()>Autor</ion-button><br/>
+
+    <ion-card>
+      <ion-card-header>
+        <center>
+          <img width="100px" height="110px" src="../../assets/imgs/app/logo.png" />
+        </center>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Seleciones una de las opciones de nuestro menu: autor para consultar la informacion del autor y productos
+          para navegar en nuestro catalogo</p>
+        <ion-button color="tertiary" expand="full" (click)=lanzarProducto()>Productos</ion-button><br />
+        <ion-button color="light" expand="full" (click)=lanzarAutor()>Autor</ion-button><br />
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
