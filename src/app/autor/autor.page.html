@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Autor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let autorInfo of autorServe.autorInfo">
+
+    <ion-card-header>
+      <ion-avatar>
+        <img src="../../assets/imgs/app/{{autorInfo.imagen}}" />
+      </ion-avatar>
+      <ion-card-subtitle>{{autorInfo.nombre}}{{autorInfo.apellido}}</ion-card-subtitle>
+      <ion-card-title>{{autorInfo.carnet}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

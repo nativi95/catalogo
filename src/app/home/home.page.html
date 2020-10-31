@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary" >
+    <ion-title >
+      Mi Tienda
     </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="success">
+    <ion-title *ngFor="let autorInfo of autorServe.autorInfo" >{{autorInfo.carnet}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+    <p>Seleciones una de las opciones de nuestro menu: autor para consultar la informacion del autor y productos para navegar en nuestro catalogo</p>
+    <ion-button color="tertiary" expand="full" (click)=lanzarProducto()>Productos</ion-button><br/>
+    <ion-button color="light" expand="full" (click)=lanzarAutor()>Autor</ion-button><br/>
   </div>
 </ion-content>

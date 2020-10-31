@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/productos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>DetallesProducto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>{{catalogo.nombre}}</ion-card-header>
+
+    <ion-card-content>
+      <img src="../../assets/imgs/catalogo/{{catalogo.imagen}}">
+      <p>Autor: {{catalogo.Autor}}</p>
+      <ion-text color="dark">Precio: ${{catalogo.precio}}</ion-text>
+      <h5>Datos adicionales</h5><br />
+      <p>
+       {{catalogo.Descripcion}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

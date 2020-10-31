@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ngDefaultControl="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <h3>Catalogo de productos</h3>
+    </ion-list-header>
+
+    <ion-item *ngFor="let catalogo of catalogo.catalogos" (click)=mostrarDetalle(catalogo)>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/imgs/catalogo/{{catalogo.imagen}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h5>{{catalogo.nombre}}</h5>
+        <p> autor: {{catalogo.Autor}}</p>
+        <ion-text color="dark">${{catalogo.precio}}</ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
