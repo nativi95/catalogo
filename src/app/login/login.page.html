@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <center>
+        <img width="100px" height="110px" src="../../assets/imgs/app/logo.png" />
+      </center>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formulario" (ngSubmit)="DoLogin()">
+        <ion-list>
+          <ion-item>
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label position="stacked">Usuario</ion-label>
+            <ion-input formControlName="user" type="text" placeholder="Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" name="eye-off-outline"></ion-icon>
+            <ion-label position="stacked">contraseña</ion-label>
+            <ion-input formControlName="pass" type="password" placeholder="pass"></ion-input>
+          </ion-item>
+          <div class="ion-padding">
+            <ion-button expand="full" type="submit" [disable]="!formulario.valid">
+              <ion-icon slot="end" name="key-outline"></ion-icon>
+              Login
+            </ion-button>
+          </div>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
