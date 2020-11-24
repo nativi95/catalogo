@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class ProductoService {
   private catalogos: any[]=[
-    { "id": "1", "nombre": "El pistolero", "Descripcion": "Autor: Stephen King \n Cronologia: La torre oscura \n numero:1\n", "imagen":"El_pistolero.jpg", "precio": "14.99", "marca":"de bolsillo", "modelo":"N/A", "marca":"editorial de bolsillo"},
+    { "id": "1", "nombre": "El pistolero", "Descripcion": "Autor: Stephen King \n Cronologia: La torre oscura \n numero:1\n", "imagen":"El_pistolero.jpg", "precio": "14.99",  "modelo":"N/A", "marca":"editorial de bolsillo"},
     { "id": "2", "nombre": "La llegada de los tres","Descripcion": "Autor: Stephen King \nCronologia: La torre oscura\n numero:2", "imagen":"La_llegada_de_los_tres.jpg", "precio": "15.99", "modelo":"N/A", "marca":"editorial de bolsillo"},
     { "id": "3", "nombre": "Las tierras baldias", "Descripcion": "Autor: Stephen King \nCronologia: La torre oscura\n numero:3", "imagen":"Las_tierras_baldias.jpg", "precio": "15.99", "modelo":"N/A", "marca":"editorial de bolsillo"},
     { "id": "4", "nombre": "Mago y cristal", "Descripcion": "Autor: Stephen King \nCronologia: La torre oscura\n numero:4", "imagen":"Mago_y_cristal.jpg", "precio": "17.99", "modelo":"N/A", "marca":"editorial de bolsillo"},
